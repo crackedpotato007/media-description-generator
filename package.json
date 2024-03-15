@@ -10,11 +10,18 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.7",
-    "prompt-sync": "^4.2.0",
-    "typescript": "^5.4.2"
+    "dotenv-safe": "^9.1.0",
+    "glob": "^10.3.10",
+    "prompt-sync": "^4.2.0"
   },
   "devDependencies": {
+    "@types/dotenv-safe": "^8.1.6",
     "@types/node": "^20.11.28",
-    "@types/prompt-sync": "^4.2.3"
+    "@types/prompt-sync": "^4.2.3",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "prettier-eslint": "^16.3.0",
+    "typescript": "^4.9.5"
   }
 }
