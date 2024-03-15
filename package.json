@@ -1,0 +1,20 @@
+{
+  "name": "torrent-detail-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "prompt-sync": "^4.2.0",
+    "typescript": "^5.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.28",
+    "@types/prompt-sync": "^4.2.3"
+  }
+}
