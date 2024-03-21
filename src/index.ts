@@ -3,9 +3,23 @@ import { config } from "dotenv-safe";
 config();
 import seasonPack from "./season-pack";
 import episodeHandler from "./episode";
+import movieHandler from "./movie";
 async function main() {
   const userInterface = prompt();
-
+  const movie_tv = userInterface(
+    "Is this a movie or a tv series? -> Movie/TV ",
+  );
+  if (movie_tv.toLowerCase() === "movie") {
+    const movieName = userInterface("What is the name of the movie? ");
+    const path = userInterface("What is the path of the movie? ");
+    /*
+    const movieName = "The Dark Knight";
+    const path = "/srv/mergerfs/masterdatavault/datavault1/movies/The Dark Knight";
+    */
+    console.log("Movie Name:", movieName);
+    console.log("Path:", path);
+    return await movieHandler(movieName, path);
+  }
   const seriesName = userInterface("What is the name of the series? ");
   const path = userInterface("What is the path of the series? ");
   const seasons = userInterface(
