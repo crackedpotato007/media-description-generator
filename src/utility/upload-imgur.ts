@@ -8,10 +8,11 @@ async function main(buffer: string): Promise<string> {
     },
     {
       headers: {
-        Authorization: "Client-ID" + process.env.IMGUR_CLIENT_ID,
+        Authorization: "Client-ID " + process.env.IMGUR_CLIENT_ID,
       },
     },
   );
+  console.log(data.data);
   if (data.status !== 200 || !data.data.success) {
     throw new Error("Error uploading image");
   }

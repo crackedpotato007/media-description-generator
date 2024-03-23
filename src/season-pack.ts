@@ -115,11 +115,13 @@ async function main(path: string, seasons: string[], seriesName: string) {
     Buffer.from(thumbnail.data, "binary").toString("base64"),
   );
   const video = await execSync(`mediainfo "${files[0]}"`);
-  console.log(`[center][img]${thumbnailURL}[img]`);
+  console.log(`[center][img]${thumbnailURL}[/img]`);
   console.log(`[title=purple] ${seriesName} [/title][/center]`);
   console.log("[icon=info3]");
   console.log("Media Info");
+  console.log("[pre]");
   console.log(video.toString());
+  console.log("[/pre]");
   console.log(
     `TMDB URL -> https://www.themoviedb.org/tv/${showDetails.data.id}`,
   );
@@ -132,7 +134,7 @@ async function main(path: string, seasons: string[], seriesName: string) {
   }
   console.log("[icon=screens2]");
   for (const screenshot of screenshotURLs) {
-    console.log(screenshot);
+    console.log(`[img]${screenshot}[/img]`);
   }
   // eslint-disable-next-line no-useless-escape
   execSync(`mktorrent -a ${process.env.ANNOUNCE_URL!} -p \"${path}\" `);
