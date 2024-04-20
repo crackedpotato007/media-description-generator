@@ -78,7 +78,7 @@ async function main(path: string, seasons: string[], seriesName: string) {
 
   for (const [ind, showSeason] of showSeasons.entries()) {
     //console.log(showSeason, seasonEpisodesCount[ind]);
-
+    if(!seasons.includes(showSeason)) return
     if (
       parseInt(showSeason) !== seasonEpisodesCount[ind] &&
       seasonEpisodesCount[ind] !== 0
