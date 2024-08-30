@@ -88,6 +88,6 @@ async function main(movie_name: string, path: string) {
     console.log(`[img]${screenshot}[/img]`);
   }
   // eslint-disable-next-line no-useless-escape
-  execSync(`mktorrent -a ${process.env.ANNOUNCE_URL!} -p \"${path}\" `);
+  execSync(`mktorrent -a ${process.env.ANNOUNCE_URL!} -p \"${path}\" -l 23`);
 }
 export default main;
